@@ -8,6 +8,10 @@ if (module.hot) {
   });
 }
 
+document.addEventListener('DOMContentLoaded', () => {
+  new Another()
+})
+
 class Another {
   constructor() {
 
@@ -21,7 +25,3 @@ class Another {
     console.log('another')
   }
 }
-
-document.addEventListener('DOMContentLoaded', () => {
-  new Another()
-})

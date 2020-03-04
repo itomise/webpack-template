@@ -11,6 +11,10 @@ if (module.hot) {
   });
 }
 
+document.addEventListener('DOMContentLoaded', () => {
+  new Main()
+})
+
 class Main {
   constructor() {
 
@@ -41,7 +45,3 @@ class Main {
     })
   }
 }
-
-document.addEventListener('DOMContentLoaded', () => {
-  new Main()
-})
