@@ -45,6 +45,21 @@ const config = merge(baseConfig, {
           },
         ],
       },
+      {
+        test: /\.pug$/,
+        use: [
+          {
+            loader: 'pug-html-loader',
+            options: {
+              pretty: true,
+              data: {
+                PUBLIC_URL: PUBLIC_URL,
+                env: 'develop'
+              }
+            },
+          }
+        ]
+      }
     ]
   }
 });

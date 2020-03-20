@@ -10,7 +10,6 @@ const baseConfig = require('./webpack.common.js').webpack_config
 
 const config = merge(baseConfig, {
   mode: 'production',
-
   module: {
     rules: [
       {
@@ -38,6 +37,21 @@ const config = merge(baseConfig, {
             loader: 'sass-loader',
           },
         ],
+      },
+      {
+        test: /\.pug$/,
+        use: [
+          {
+            loader: 'pug-html-loader',
+            options: {
+              pretty: true,
+              data: {
+                PUBLIC_URL: PUBLIC_URL,
+                env: 'production'
+              }
+            },
+          }
+        ]
       }
     ]
   },
@@ -56,7 +70,17 @@ const config = merge(baseConfig, {
       new TerserPlugin({
         extractComments: 'all',
       })
-    ]
+    ],
+    splitChunks: {
+      cacheGroups: {
+        vendor: {
+          test: /node_modules/,
+          name: 'vendor',
+          chunks: 'initial',
+          enforce: true
+        }
+      }
+    }
   }
 });
 

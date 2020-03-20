@@ -39,14 +39,9 @@ const webpack_config = {
           {
             loader: 'file-loader',
             options: {
-              name(file) {
-                const dirArray = file.split('\\src\\pages\\')[1].split('\\')
-                let publishName = ''
-                dirArray.forEach( (n, index) => {
-                  index !== 0 ? publishName += '/' : null
-                  publishName += `${n}`
-                })
-                return `${publishName.slice(0, -3)}html`
+              name: '[path][name].html',
+              outputPath: (url) => {
+                return path.relative('src/pages', url)
               },
               url: false
             }
@@ -57,15 +52,6 @@ const webpack_config = {
             options: {
               attrs: ['img:src', ':data-src']
             }
-          },
-          {
-            loader: 'pug-html-loader',
-            options: {
-              pretty: true,
-              data: {
-                PUBLIC_URL: PUBLIC_URL
-              }
-            },
           }
         ]
       },

@@ -4,15 +4,18 @@ include ../../pug_templates/components/button
 
 block variables
   -
-    var appId = 'test';  // JSのアプリ起動に使われるID名（使わない場合は空文字）
     var title = 'テスト';
     var description = '説明';
 
-block css
+block page_css
   link(rel='stylesheet', href= PUBLIC_URL + '/css/another.css')
 
 block content
-  p This is hoge page!
-  +button
+  .test
+    .test__title ...
+    .test__image.another
+    p This is hoge page!
+    +button
 
+block page_js
   script(src= PUBLIC_URL + '/js/another.js')

@@ -42,9 +42,11 @@ html(lang='ja')
 
     link(rel='stylesheet', href= PUBLIC_URL + '/css/main.css')
 
-    block css
+    block page_css
 
   body
     block content
 
-    script(src= PUBLIC_URL + '/js/main.js')
+    if (env === 'production')
+      script(src= PUBLIC_URL + '/js/vendor.js')
+    block page_js

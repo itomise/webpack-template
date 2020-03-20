@@ -3,7 +3,7 @@ const webpack = require('webpack')
 const webpackDevMiddleware = require('webpack-dev-middleware')
 const webpackHotMiddleware = require('webpack-hot-middleware')
 
-const webpackConfig = require('../webpack.dev')
+const webpackConfig = require('./webpack.dev')
 const bundler = webpack(webpackConfig)
 
 const webpackDevMiddlewareInstance = webpackDevMiddleware(bundler, {
