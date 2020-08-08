@@ -15,5 +15,5 @@ v12.18.3
 - `webpack.common.js` 内の`PUBLIC_URL`でbase path 変更
 - `src/pages/`配下のpugファイルはディレクトリ構造を保ったままhtmlファイルとして生成
 
-## TypeScript
+## with TypeScript
 https://github.com/itomise/webpack-template-ts
