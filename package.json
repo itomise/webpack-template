@@ -3,7 +3,6 @@
   "author": "Ryota Ito (https://github.com/itomise)",
   "scripts": {
     "dev": "node ./server.js",
-    "start": "webpack --config webpack.dev.js",
     "build": "rimraf ./htdocs && webpack --config webpack.prod.js",
     "dev-server": "webpack-dev-server --config webpack.dev.js"
   },
