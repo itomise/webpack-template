@@ -44,28 +44,10 @@
 
 /************************************************************************/
 
-/* 0 */
-
-/* 1 */
-
-/* 2 */
-
-/* 3 */
-
 /***/
 
-/* harmony import */
+// EXTERNAL MODULE: ./src/styles/home.scss
 
-/* 4 */
-
-/* 5 */
-
-/* 6 */
-
-/* 7 */
-
-/* 8 */
-
-/* 9 */
+// CONCATENATED MODULE: ./src/javascripts/modules/load.js
 
 // extracted by mini-css-extract-plugin
