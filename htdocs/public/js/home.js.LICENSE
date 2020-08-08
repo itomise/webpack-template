@@ -46,6 +46,8 @@
 
 /***/
 
+// ESM COMPAT FLAG
+
 // EXTERNAL MODULE: ./src/styles/home.scss
 
 // CONCATENATED MODULE: ./src/javascripts/modules/load.js
